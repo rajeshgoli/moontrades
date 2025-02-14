@@ -36,6 +36,17 @@ def extract_trade_details(tweet_text):
     return response["choices"][0]["message"]["content"]
 
 # Example usage
-tweet = "$M 15 CALL 2/14 @ .11 500% POTENTIAL"
-trade_details = extract_trade_details(tweet)
-print(trade_details)
+# tweet = "$M 15 CALL 2/14 @ .11 500% POTENTIAL"
+# trade_details = extract_trade_details(tweet)
+# print(trade_details)
+
+# Expected usage:
+# {
+#    "action": "Trade Entry",
+#    "ticker": "M",
+#    "option_type": "CALL",
+#    "strike_price": 15,
+#    "expiration_date": "2025-02-14",
+#    "entry_price": 0.11,
+#    "profit_target": 500
+#}
